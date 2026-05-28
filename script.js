@@ -34,7 +34,7 @@ mobileMenu.querySelectorAll('a').forEach(a => {
 
 // ---- Scroll reveal ----
 const revealEls = document.querySelectorAll(
-  '.service-card, .team-card, .v-item, .ueber-card-main, .kontakt-item'
+  '.service-card, .team-card, .v-item, .testimonial-card, .kontakt-item, .kontakt-btn'
 );
 revealEls.forEach(el => el.classList.add('reveal'));
 
@@ -73,26 +73,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
-});
-
-// ---- Contact form ----
-const form = document.getElementById('contactForm');
-const successMsg = document.getElementById('formSuccess');
-
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  const btn = form.querySelector('button[type=submit]');
-  btn.disabled = true;
-  btn.querySelector('span').textContent = 'Wird gesendet...';
-
-  // Simulate sending (replace with actual form service endpoint)
-  setTimeout(() => {
-    successMsg.classList.add('show');
-    form.reset();
-    btn.disabled = false;
-    btn.querySelector('span').textContent = 'Anfrage absenden';
-    setTimeout(() => successMsg.classList.remove('show'), 6000);
-  }, 1200);
 });
 
 // ---- Number counter animation for hero stats ----
