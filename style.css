@@ -368,6 +368,7 @@ section { padding: 100px 0; }
   background: linear-gradient(135deg, rgba(192,57,43,0.04) 0%, transparent 60%);
   opacity: 0;
   transition: var(--transition);
+  pointer-events: none;
 }
 
 .service-card:hover {
@@ -1085,6 +1086,92 @@ footer {
   .services-grid-4 { grid-template-columns: 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .kontakt-actions-inner { padding: 24px; }
+}
+
+/* ============================================
+   REAL PHOTO IMAGES
+   ============================================ */
+.hero-img-frame {
+  width: 100%;
+  height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.hero-img-real {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
+.banner-img-frame {
+  width: 100%;
+  height: 260px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.banner-img-real {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+  display: block;
+}
+
+.ueber-img-frame {
+  width: 100%;
+  height: 380px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.ueber-img-real {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
+
+.kontakt-img-frame {
+  width: 100%;
+  height: 220px;
+  margin-top: 24px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+}
+.kontakt-img-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(170deg, rgba(8,11,18,0.1) 30%, rgba(8,11,18,0.55) 100%);
+  pointer-events: none;
+  border-radius: var(--radius-lg);
+}
+.kontakt-img-real {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+.team-wc-avatar {
+  width: 100%;
+  height: 180px;
+  border-radius: var(--radius);
+  background: var(--bg-card2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team-wc-avatar svg {
+  height: 140px;
+  width: auto;
 }
 
 /* ============================================
