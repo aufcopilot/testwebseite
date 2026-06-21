@@ -533,51 +533,73 @@ section { padding: 100px 0; }
 .check { color: var(--gold); font-weight: 700; font-size: 1rem; }
 
 .ueber-personen-row {
-  display: flex;
-  justify-content: center;
-  gap: 72px;
-  margin-top: 64px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 680px;
+  margin: 64px auto 0;
   padding-top: 48px;
   border-top: 1px solid var(--border);
 }
 .ueber-person {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  background: var(--bg-dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+.ueber-person:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  border-color: rgba(192,57,43,0.4);
 }
 .ueber-person-photo-wrap {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  width: 100%;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
-  border: 3px solid rgba(192,57,43,0.5);
-  margin-bottom: 20px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  position: relative;
+}
+.ueber-person-photo-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 35%;
+  background: linear-gradient(to top, rgba(8,11,18,0.85) 0%, transparent 100%);
+  pointer-events: none;
 }
 .ueber-person-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  display: block;
+  transition: transform 0.6s ease;
 }
-.ueber-person h4 {
-  font-size: 1.1rem;
+.ueber-person:hover .ueber-person-photo { transform: scale(1.04); }
+.ueber-person-info {
+  padding: 20px 24px 24px;
+  text-align: center;
+}
+.ueber-person-info h4 {
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--white);
   margin-bottom: 8px;
 }
 .ueber-person-role {
-  font-size: 0.78rem;
+  display: inline-block;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--gold);
+  background: var(--gold-dim);
+  border: 1px solid rgba(192,57,43,0.25);
+  padding: 4px 12px;
+  border-radius: 100px;
 }
 @media (max-width: 560px) {
-  .ueber-personen-row { gap: 32px; }
-  .ueber-person-photo-wrap { width: 130px; height: 130px; }
-  .ueber-person h4 { font-size: 0.95rem; }
+  .ueber-personen-row { grid-template-columns: 1fr; max-width: 300px; }
 }
 
 /* ============================================
