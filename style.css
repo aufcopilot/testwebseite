@@ -164,8 +164,13 @@ section { padding: 100px 0; }
   color: var(--white);
   letter-spacing: 0.05em;
 }
-.logo-icon { font-size: 1.4rem; filter: drop-shadow(0 0 8px rgba(192,57,43,0.6)); }
-.logo-text strong { color: var(--gold); }
+.logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(192,57,43,0.4));
+}
+.footer-brand .logo-img { height: 52px; }
 
 .nav-links {
   display: flex;
