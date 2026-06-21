@@ -92,6 +92,23 @@ section { padding: 100px 0; }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(192,57,43,0.4); filter: brightness(1.1); }
 .btn-primary svg { width: 18px; height: 18px; }
 
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 13px 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+.btn-outline:hover { border-color: rgba(192,57,43,0.5); color: var(--gold); transform: translateY(-2px); }
+
 .btn-ghost {
   display: inline-flex;
   align-items: center;
