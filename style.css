@@ -535,9 +535,9 @@ section { padding: 100px 0; }
 .ueber-personen-row {
   display: flex;
   justify-content: center;
-  gap: 60px;
-  margin-top: 56px;
-  padding-top: 40px;
+  gap: 72px;
+  margin-top: 64px;
+  padding-top: 48px;
   border-top: 1px solid var(--border);
 }
 .ueber-person {
@@ -547,13 +547,13 @@ section { padding: 100px 0; }
   text-align: center;
 }
 .ueber-person-photo-wrap {
-  width: 130px;
-  height: 130px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid rgba(192,57,43,0.45);
-  margin-bottom: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  border: 3px solid rgba(192,57,43,0.5);
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
 }
 .ueber-person-photo {
   width: 100%;
@@ -562,21 +562,22 @@ section { padding: 100px 0; }
   object-position: center top;
 }
 .ueber-person h4 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--white);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 .ueber-person-role {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--gold);
 }
-@media (max-width: 480px) {
+@media (max-width: 560px) {
   .ueber-personen-row { gap: 32px; }
-  .ueber-person-photo-wrap { width: 100px; height: 100px; }
+  .ueber-person-photo-wrap { width: 130px; height: 130px; }
+  .ueber-person h4 { font-size: 0.95rem; }
 }
 
 /* ============================================
